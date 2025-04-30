@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Factorized Diffusion Policy">
+  <meta name="keywords"
+    content="Robotic Manipulation, Imitation Learning, Behavior Cloning, Diffusion, Diffusion Policy, Composition">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FDP</title>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/misc.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Videos</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Assembly</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/assembly.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Disassemble</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/disassemble.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Door close</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/door-close.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Door open</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/door-open.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Drawer close</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/drawer-close.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Drawer open</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/drawer-open.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Hammer</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/hammer.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Peg insert</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/peg-insert-side.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Window close</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/window-close.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Window open</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/metaworld/video_grids/window-open.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Close box</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/rlbench/video_grids/close_box.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Open box</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/rlbench/video_grids/open_box.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Open drawer</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/rlbench/video_grids/open_drawer.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Take umbrella out</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/rlbench/video_grids/take_umbrella_out_of_umbrella_stand.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Toilet seat down</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/rlbench/video_grids/toilet_seat_down.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Toilet seat up</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/rlbench/video_grids/toilet_seat_up.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Cube red</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/realworld/video_grids/cube-red.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Cube blue</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/realworld/video_grids/cube-blue.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Hang low</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/realworld/video_grids/hang-low.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Hang high</h2>
+            <video id="dist1" controls muted autoplay loop width="90%">
+              <source src="./media/videos/realworld/video_grids/hang-high.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
